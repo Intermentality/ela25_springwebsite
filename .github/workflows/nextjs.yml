@@ -4,16 +4,6 @@
 #
 name: Deploy Next.js site to Pages
 
-steps:
-  - uses: actions/checkout@v4
-  - name: Enable Corepack
-    run: corepack enable
-  - name: Use Node.js 20.x
-    uses: actions/setup-node@v4
-    with:
-      node-version: '20.x'
-      cache: 'yarn'
-
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -41,6 +31,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+        # CorePack
+        name: Enable Corepack
+        run: corepack enable
+
+        # Star using yarn.
       - name: Detect package manager
         id: detect-package-manager
         run: |
