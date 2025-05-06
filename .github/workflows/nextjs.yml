@@ -48,6 +48,15 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+      - name: 📥 Monorepo install                                                     #
+        uses: ./.github/actions/yarn-nm-install                                       #
+        with:                                                                         #
+          enable-corepack: false                   # (default = 'false')              #
+          cache-npm-cache: false                   # (default = 'true')               #
+          cwd: ${{ github.workspace }}/apps/my-app # (default = '.')                  #
+          cache-prefix: add cache key prefix       # (default = 'default')            #
+          cache-node-modules: false                # (default = 'false')              #
+          cache-install-state: false               # (default = 'false')     
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
