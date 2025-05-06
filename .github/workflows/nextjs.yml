@@ -50,7 +50,7 @@ jobs:
           fi
       - name: Install Yarn
         run: |
-          yarn policies set-version stable
+          yarn set-version stable
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
