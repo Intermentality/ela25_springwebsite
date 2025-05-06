@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 import createMDX from '@next/mdx';
 
 const nextConfig: NextConfig = {
-  basePath: "/ela25_springwebsite",
+  output: 'export',
+  basePath: process.env.PAGES_BASE_PATH,
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 
   //Compiler for quick loading. [Enable during production lol.]
