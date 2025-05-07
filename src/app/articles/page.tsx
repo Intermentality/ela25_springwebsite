@@ -24,7 +24,7 @@ export default async function ArticlesList() {
                             <td>{article.frontmatter.title}</td>
                             <td>{article.frontmatter.author}</td>
                             <td>{article.frontmatter.publishDate}</td>
-                            <td className="text-info-content underline"><Link href={`/articles/${article.slug}`}>Read More</Link></td>
+                            <td className="font-bold italic underline"><Link href={`/articles/${article.slug}`}>Read More</Link></td>
                         </tr>
                     ))}
                 </tbody>

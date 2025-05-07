@@ -13,11 +13,13 @@ export default function Home(){
             <div className="hero-overlay"></div>
             <div className="hero-content text-neutral-content text-center">
                 <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Aftershock Website</h1>
-                <p className="mb-5">
-                    Read articles on what happened in Afghanistan and how to people!
-                </p>
-                <Link href="/articles"><button className="btn btn-primary">Read here!</button></Link>
+                <div className="max-w-md text-center">
+                    <h1 className="mb-5 text-5xl font-bold">Aftershock Website</h1>
+                    <p className="mb-5">
+                        Read articles on what happened in Afghanistan and how to people! [MVP version!]
+                    </p>
+                    <Link href="/articles"><button className="btn btn-primary">Read here!</button></Link>
+                </div>
                 </div>
             </div>
         </div>
